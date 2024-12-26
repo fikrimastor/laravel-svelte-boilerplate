@@ -31,7 +31,6 @@ class ProfileController extends Controller
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
         $request->user()->fill($request->validated()); /** @phpstan-ignore-line  */
-
         if ($request->user()->isDirty('email')) { /** @phpstan-ignore-line  */
             $request->user()->email_verified_at = null; /** @phpstan-ignore-line  */
         }
@@ -55,7 +54,6 @@ class ProfileController extends Controller
         Auth::logout();
 
         $user->delete(); /** @phpstan-ignore-line  */
-
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
