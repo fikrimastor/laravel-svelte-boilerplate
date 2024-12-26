@@ -45,7 +45,6 @@
 		<div class="flex justify-end mt-4">
 			<BreezeButton
 					class="ml-4"
-					xclass:opacity-25={form.processing}
 					disabled={form.processing}
 			>
 				Confirm

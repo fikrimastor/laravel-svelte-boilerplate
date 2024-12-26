@@ -3,19 +3,16 @@
 	import TextInput from "@/Components/Input.svelte";
 	import InputLabel from "@/Components/Label.svelte";
 	import InputError from "@/Components/Error.svelte";
-	import { page, useForm } from "@inertiajs/svelte";
+	import { useForm } from "@inertiajs/svelte";
 	let err = {};
 	export let errors = {};
 
 	export let
-			status,
 			statusMessage = "{{ __('passwords.updated') }}",
 			classes = "",
 			passwordInput,
 			confirmPasswordInput,
 			currentPasswordInput;
-
-	const user = $page.props.auth.user;
 
 	const form = useForm({
 		current_password: '',
