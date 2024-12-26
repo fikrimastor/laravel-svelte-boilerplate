@@ -1,12 +1,6 @@
 name: run-tests
 
-on:
-  push:
-    paths:
-      - '**.php'
-      - '.github/workflows/run-tests.yml'
-      - 'composer.json'
-      - 'composer.lock'
+on: [push, pull_request]
 
 jobs:
   test:
