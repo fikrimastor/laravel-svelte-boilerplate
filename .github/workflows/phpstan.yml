@@ -1,6 +1,11 @@
 name: PHPStan
 
-on: pull_request_target
+on:
+  push:
+    paths:
+      - '**.php'
+      - 'phpstan.neon'
+      - '.github/workflows/phpstan.yml'
 
 jobs:
   phpstan:
