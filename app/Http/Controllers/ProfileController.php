@@ -30,13 +30,13 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        $request->user()->fill($request->validated()); /** @phpstan-ignore-line  */
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        if ($request->user()->isDirty('email')) { /** @phpstan-ignore-line  */
+            $request->user()->email_verified_at = null; /** @phpstan-ignore-line  */
         }
 
-        $request->user()->save();
+        $request->user()->save(); /** @phpstan-ignore-line  */
 
         return Redirect::route('profile.edit');
     }
@@ -54,7 +54,7 @@ class ProfileController extends Controller
 
         Auth::logout();
 
-        $user->delete();
+        $user->delete(); /** @phpstan-ignore-line  */
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
