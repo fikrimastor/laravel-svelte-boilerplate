@@ -5,7 +5,7 @@
 	import BreezeInput from "@/Components/Input.svelte";
 	import BreezeLabel from "@/Components/Label.svelte";
 	import BreezeValidationErrors from "@/Components/ValidationErrors.svelte";
-	import { page, Link, useForm, router } from "@inertiajs/svelte";
+	import { Link, useForm } from "@inertiajs/svelte";
 	let err = {};
 	export let errors = {};
 	export let canResetPassword;
@@ -68,7 +68,7 @@
 		</div>
 
 		<div class="block mt-4">
-			<!-- svelte-ignore a11y-label-has-associated-control -->
+			<!-- Warning svelte-ignore a11y-label-has-associated-control -->
 			<label class="flex items-center">
 				<BreezeCheckbox name="remember" bind:checked={$form.remember} />
 				<span class="ml-2 text-sm text-gray-600">Remember me</span>
@@ -87,7 +87,6 @@
 
 			<BreezeButton
 					class="ml-4"
-					sclass:opacity-25={$form.processing}
 					disabled={$form.processing}
 			>
 				Log in

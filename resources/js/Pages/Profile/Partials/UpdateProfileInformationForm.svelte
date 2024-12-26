@@ -3,7 +3,7 @@
 	import TextInput from "@/Components/Input.svelte";
 	import InputLabel from "@/Components/Label.svelte";
 	import InputError from "@/Components/Error.svelte";
-	import { page, Link, useForm, router } from "@inertiajs/svelte";
+	import { page, Link, useForm } from "@inertiajs/svelte";
 	let err = {};
 	export let errors = {};
 

@@ -75,7 +75,6 @@
 
 		<div class="flex items-center justify-end mt-4">
 			<BreezeButton
-					xclass:opacity-25={form.processing}
 					disabled={form.processing}
 			>
 				Reset Password

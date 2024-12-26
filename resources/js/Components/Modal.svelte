@@ -47,10 +47,15 @@
 					transition:fade={{ duration: 200 }}
 					class="fixed inset-0 transform transition-all"
 					on:click={close}
+        role="button"
+        on:keydown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          close;
+        }
+      }}
+        tabindex="0"
 			>
-				<div
-						class="absolute inset-0 bg-gray-500 dark:bg-gray-900 opacity-75"
-				/>
+				<div class="absolute inset-0 bg-gray-500 dark:bg-gray-900 opacity-75"></div>
 			</div>
 		{/if}
 

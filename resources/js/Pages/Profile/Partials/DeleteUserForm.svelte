@@ -1,9 +1,8 @@
 <script>
-	import TransitionButton from "@/Components/TransitionButton.svelte";
 	import TextInput from "@/Components/Input.svelte";
 	import InputLabel from "@/Components/Label.svelte";
 	import InputError from "@/Components/Error.svelte";
-	import { page, useForm } from "@inertiajs/svelte";
+	import { useForm } from "@inertiajs/svelte";
 	import DangerButton from "@/Components/DangerButton.svelte";
 	import Modal from "@/Components/Modal.svelte";
 	import SecondaryButton from "@/Components/SecondaryButton.svelte";
@@ -12,15 +11,7 @@
 
 	let confirmingUserDeletion = false;
 
-	export let
-			status,
-			statusMessage = "{{ __('passwords.updated') }}",
-			classes = "",
-			passwordInput,
-			confirmPasswordInput,
-			currentPasswordInput;
-
-	const user = $page.props.auth.user;
+	export let classes = "";
 
 	const form = useForm({
 		password: '',
